@@ -124,20 +124,16 @@ class MainActivity : AppCompatActivity() {
             }
             SQUEEZE -> {
                 if (lemonSize == 0){
-                    Toast.makeText(this,"Size: $lemonSize",Toast.LENGTH_SHORT).show()
                     lemonadeState =DRINK
                     lemonSize = -1
                 }else{
                     squeezeCount++
-                    Toast.makeText(this,"Size: $lemonSize",Toast.LENGTH_SHORT).show()
                     lemonSize--
                 }
             }
             DRINK -> {
-                lemonadeState == RESTART
-                Toast.makeText(this,"Size: $lemonSize",Toast.LENGTH_SHORT).show()
+                lemonadeState = RESTART
             } RESTART -> {
-            Toast.makeText(this,"Size: $lemonSize",Toast.LENGTH_SHORT).show()
             lemonadeState = SELECT
             }
         }
